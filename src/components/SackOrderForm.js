@@ -8,7 +8,7 @@ function SackOrderForm(props) {
     props.onNewSackOrder({
       name: event.target.name.value,
       origin: event.target.origin.value,
-      price: event.target.price.value,
+      price: toString(event.target.price.value),
       roast: event.target.roast.value,
       id: v4()
     })

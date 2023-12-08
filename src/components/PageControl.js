@@ -39,6 +39,7 @@ class PageControl extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
+        <h1>{this.state.sackList.name}</h1>
         <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     )

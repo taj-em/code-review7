@@ -3,22 +3,22 @@ import Sack from './Sack';
 import PropTypes from 'prop-types';
 
 // function SackList(props) {
-//   return (
-//     <React.Fragment>
-//       <hr />
-//       {props.sackList.map((sack, index) => // Loop through the list passed down from TicketControl.
-//         <Sack name={sack.name}
-//           origin={sack.origin}
-//           price={sack.price}
-//           roast={sack.roast}
-//           key={index} />
-//       )}
-//     </React.Fragment>
-//   )
-// }
+//     return (
+//       <React.Fragment>
+//         <hr />
+//         {props.sackListProp.map((sack, index) => // Loop through the list passed down from TicketControl.
+//           <Sack name={sack.name}
+//             origin={sack.origin}
+//             price={sack.price}
+//             roast={sack.roast}
+//             key={index} />
+//         )}
+//       </React.Fragment>
+//     )
+//   }
 
 // SackList.propTypes = {
-//   sackList: PropTypes.array
+//   sackListProp: PropTypes.array
 // }
 
 // export default SackList;
@@ -26,7 +26,8 @@ import PropTypes from 'prop-types';
 function SackList(props) {
     return (
       <React.Fragment>
-        <h1>Hello World</h1>
+        <h1>Orders:</h1>
+        <h3>Bean Type: <span>{props.name}</span></h3>
       </React.Fragment>
     )
   }
