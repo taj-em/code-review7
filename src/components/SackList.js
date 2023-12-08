@@ -1,6 +1,6 @@
-// import React from 'react';
-// import Sack from './Sack';
-// import PropTypes from 'prop-types';
+import React from 'react';
+import Sack from './Sack';
+import PropTypes from 'prop-types';
 
 // function SackList(props) {
 //   return (
@@ -22,3 +22,13 @@
 // }
 
 // export default SackList;
+
+function SackList(props) {
+    return (
+      <React.Fragment>
+        <h1>Hello World</h1>
+      </React.Fragment>
+    )
+  }
+
+  export default SackList;
