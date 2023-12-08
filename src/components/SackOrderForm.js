@@ -8,10 +8,11 @@ function SackOrderForm(props) {
     props.onNewSackOrder({
       name: event.target.name.value,
       origin: event.target.origin.value,
-      price: toString(event.target.price.value),
+      price: event.target.price.value,
       roast: event.target.roast.value,
       id: v4()
-    })
+    }
+    )
   }
 
   return (
@@ -19,7 +20,7 @@ function SackOrderForm(props) {
       <form onSubmit={handleSackOrderSubmission}>
         <input
           type='text'
-          name='bean-name'
+          name='beanName'
           placeholder='Bean Name:' />
         <input
           type='text'
