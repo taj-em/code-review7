@@ -1,6 +1,6 @@
 import React from 'react';
 import SackList from './SackList';
-import SackOrder from './SackOrderForm';
+import SackOrderForm from './SackOrderForm';
 
 class PageControl extends React.Component {
 
@@ -29,7 +29,7 @@ class PageControl extends React.Component {
     let buttonText = null;
 
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <SackOrder />
+      currentlyVisibleState = <SackOrderForm onNewSackOrder = {this.handleOrderingSack}/>
       buttonText = "Back To Sack List"
     } 
     else {

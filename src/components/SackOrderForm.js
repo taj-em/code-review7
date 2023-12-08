@@ -1,10 +1,17 @@
 import React from "react";
+import { v4 } from 'uuid';
 
-function OrderSack(props) {
+function SackOrderForm(props) {
 
   function handleSackOrderSubmission(event) {
     event.preventDefault();
-    
+    props.onNewSackOrder({
+      name: event.target.name.value,
+      origin: event.target.origin.value,
+      price: event.target.price.value,
+      roast: event.target.roast.value,
+      id: v4()
+    })
   }
 
   return (
@@ -32,4 +39,4 @@ function OrderSack(props) {
   );
 }
 
-export default OrderSack;
+export default SackOrderForm;
