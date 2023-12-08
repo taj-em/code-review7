@@ -12,12 +12,14 @@ class PageControl extends React.Component {
     };
   }
 
+  // Functions Correctly
   handleClick = () => {
     this.setState(prevState => ({
       formVisibleOnPage: !prevState.formVisibleOnPage
     }));
   }
 
+  // Functions Correctly
   handleOrderingSack = (newSack) => {
     const newSackList = this.state.sackList.concat(newSack);
     this.setState({sackList: newSackList,
@@ -40,6 +42,7 @@ class PageControl extends React.Component {
       <React.Fragment>
         {currentlyVisibleState}
         <button onClick={this.handleClick}>{buttonText}</button>
+        <SackList sackList = {this.state.sackList} />
       </React.Fragment>
     )
     }

@@ -26,8 +26,7 @@ import PropTypes from 'prop-types';
 function SackList(props) {
     return (
       <React.Fragment>
-        <h1>Orders:</h1>
-        <h3>Bean Type: <span>{props.name}</span></h3>
+        <h3>Bean Type: {props.SackList}</h3>
       </React.Fragment>
     )
   }

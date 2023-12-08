@@ -1,12 +1,14 @@
 import React from "react";
 import { v4 } from 'uuid';
 
+
+  // Functions Correctly
 function SackOrderForm(props) {
 
   function handleSackOrderSubmission(event) {
     event.preventDefault();
     props.onNewSackOrder({
-      name: event.target.name.value,
+      name: event.target.beanName.value,
       origin: event.target.origin.value,
       price: event.target.price.value,
       roast: event.target.roast.value,
