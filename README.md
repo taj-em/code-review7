@@ -1,6 +1,6 @@
-# _{Application Name}_
+# _Coffee Shop_
 
-#### By _**{List of contributors}**_
+#### By _**Taj Empey**_
 
 #### _{Brief description of application}_
 
