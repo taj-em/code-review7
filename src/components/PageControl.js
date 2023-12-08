@@ -1,6 +1,6 @@
 import React from 'react';
 import SackList from './SackList';
-import SackOrder from './SackOrder';
+import SackOrder from './SackOrderForm';
 
 class PageControl extends React.Component {
 
@@ -8,6 +8,7 @@ class PageControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
+      sackList: []
     };
   }
 
@@ -15,6 +16,12 @@ class PageControl extends React.Component {
     this.setState(prevState => ({
       formVisibleOnPage: !prevState.formVisibleOnPage
     }));
+  }
+
+  handleOrderingSack = (newSack) => {
+    const newSackList = this.state.sackList.concat(newSack);
+    this.setState({sackList: newSackList,
+    formVisibleOnPage: false})
   }
 
   render(){
@@ -26,7 +33,7 @@ class PageControl extends React.Component {
       buttonText = "Back To Sack List"
     } 
     else {
-      currentlyVisibleState = <SackList />
+      currentlyVisibleState = <SackList sackListProp = {this.state.sackList}/>
       buttonText = "Buy A Sack"
     }
     return (

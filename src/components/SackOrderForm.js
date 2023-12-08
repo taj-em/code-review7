@@ -3,7 +3,8 @@ import React from "react";
 function OrderSack(props) {
 
   function handleSackOrderSubmission(event) {
-
+    event.preventDefault();
+    
   }
 
   return (
@@ -16,7 +17,7 @@ function OrderSack(props) {
         <input
           type='text'
           name='origin'
-          placeholder='Origin' />
+          placeholder='Origin:' />
         <input
           type='number'
           name='price'
